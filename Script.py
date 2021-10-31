@@ -74,35 +74,8 @@ these are the extra features of tessa
 • /info  - <code>get information about a user.</code>
 • /imdb  - <code>get the film information from IMDb source.</code>
 • /search  - <code>get the film information from various sources.</code>"""
-    ADMIN_TXT = """Help: <b>Admin mods</b>
-
-<b>NOTE:</b>
-This module only works for my admins
-
-<b>Commands and Usage:</b>
-• /logs - <code>to get the rescent errors</code>
-• /stats - <code>to get status of files in db.</code>
-• /users - <code>to get list of my users and ids.</code>
-• /chats - <code>to get list of the my chats and ids </code>
-• /leave  - <code>to leave from a chat.</code>
-• /disable  -  <code>do disable a chat.</code>
-• /ban  - <code>to ban a user.</code>
-• /unban  - <code>to unban a user.</code>
-• /channel - <code>to get list of total connected channels</code>
-• /broadcast - <code>to broadcast a message to all users</code>"""
-    STATUS_TXT = """🗄️𝗕𝗢𝗧'𝗦 𝗦𝗧𝗔𝗧𝗨𝗦📊
-
-⭓ Tᴏᴛᴀʟ ғɪʟᴇs sᴀᴠᴇᴅ : <code>{}</code>
-
-⭓ Tᴏᴛᴀʟ ᴜsᴇʀs ᴜsɪɴɢ : <code>{}</code>
-
-⭓ Tᴏᴛᴀʟ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴄʜᴀᴛs : <code>{}</code>
-
-⭓ Usᴇᴅ sᴛᴏʀᴀɢᴇ : <code>{}</code> ᴍʙ's
-
-⭓ Fʀᴇᴇ sᴛᴏʀᴀɢᴇ : <code>{}</code> ᴍʙ's
-
-🔥Cʀᴇᴀᴛᴇʀ : <a href='https://t.me/DEEKS_04_8'> Dᴇᴇᴋsʜɪᴛʜ ɢᴏᴡᴅᴀ</a>"""
+    ADMIN_TXT = """🔮𝐀𝐁𝐎𝐔𝐓 𝐀𝐃𝐌𝐈𝐍 𝐌𝐎𝐃𝐄𝐒👷\n\n📝𝖭𝖮𝖳𝖤:Tʜɪs Mᴏᴅᴜʟᴇ Oɴʟʏ Wᴏʀᴋs Fᴏʀ Mʏ Aᴅᴍɪɴs 💣\n\n<u>𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 𝙰𝙽𝙳 𝚄𝚂𝙰𝙶𝙴:🗝️</u>\n• /logs - Tᴏ Gᴇᴛ Tʜᴇ Rᴇsᴄᴇɴᴛ Eʀʀᴏʀs 🌐\n• /stats - Tᴏ Gᴇᴛ Sᴛᴀᴛᴜs Oғ Fɪʟᴇs Iɴ Dʙ .🏧\n• /users - Tᴏ Gᴇᴛ Lɪsᴛ Oғ Mʏ Usᴇʀs Aɴᴅ Iᴅs. 👥\n• /chats - Tᴏ Gᴇᴛ Lɪsᴛ Oғ Tʜᴇ Mʏ Cʜᴀᴛs Aɴᴅ Iᴅs  ♨️\n• /leave  - Tᴏ Lᴇᴀᴠᴇ Fʀᴏᴍ A Cʜᴀᴛ .⛔\n• /disable  - Dᴏ Dɪsᴀʙʟᴇ A Cʜᴀᴛ .🚫\n• /ban  - Tᴏ Bᴀɴ A Usᴇʀ 🔒\n• /unban  - Tᴏ Uɴʙᴀɴ A Usᴇʀ .🔓\n• /channel - Tᴏ Gᴇᴛ Lɪsᴛ Oғ Tᴏᴛᴀʟ Cᴏɴɴᴇᴄᴛᴇᴅ Cʜᴀɴɴᴇʟs 📢\n• /broadcast - Tᴏ Bʀᴏᴀᴅᴄᴀsᴛ A Mᴇssᴀɢᴇ Tᴏ Aʟʟ Usᴇʀs 📣"""
+    STATUS_TXT = """🗄️𝗕𝗢𝗧'𝗦 𝗦𝗧𝗔𝗧𝗨𝗦📊\n\n⭓ Tᴏᴛᴀʟ ғɪʟᴇs sᴀᴠᴇᴅ : <code>{}</code>\n⭓ Tᴏᴛᴀʟ ᴜsᴇʀs ᴜsɪɴɢ : <code>{}</code>\n⭓ Tᴏᴛᴀʟ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴄʜᴀᴛs : <code>{}</code>\n⭓ Usᴇᴅ sᴛᴏʀᴀɢᴇ : <code>{}</code> ᴍʙ's\n⭓ Fʀᴇᴇ sᴛᴏʀᴀɢᴇ : <code>{}</code> ᴍʙ's\n\n🔥Cʀᴇᴀᴛᴇʀ : <a href='https://t.me/DEEKS_04_8'> Dᴇᴇᴋsʜɪᴛʜ ɢᴏᴡᴅᴀ👨🏻‍💻</a>"""
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>)
 Total Members = <code>{}</code>
