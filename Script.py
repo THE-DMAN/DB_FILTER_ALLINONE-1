@@ -1,81 +1,15 @@
 class script(object):
-    START_TXT = """𝙷𝙴𝙻𝙾 {},
-𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href='https://t.me/EvaMariaBot'>𝙴𝚅𝙰 𝙼𝙰𝚁𝙸𝙰</a>, 𝙸 𝙲𝙰𝙽 𝙿𝚁𝙾𝚅𝙸𝙳𝙴 𝙼𝙾𝚅𝙸𝙴𝚂, 𝙹𝚄𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝙴𝙽𝙹𝙾𝚈 😍"""
-    HELP_TXT = """𝙷𝙴𝚈 {}
-𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
-    ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: 𝙴𝚟𝚊 𝙼𝚊𝚛𝚒𝚊
-✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: 𝚃𝚎𝚊𝚖 𝙴𝚟𝚊 𝙼𝚊𝚛𝚒𝚊
-✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
-✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
-✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
-✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: 𝙷𝙴𝚁𝙾𝙺𝚄
-✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v1.0.1 [ 𝙱𝙴𝚃𝙰 ]"""
-    SOURCE_TXT = """<b>NOTE:</b>
-- Eva Maria is a open source project. 
-- Source - https://github.com/EvamariaTG/EvaMaria  
-
-<b>DEVS:</b>
-- <a href=https://t.me/TeamEvamaria>Team Eva Maria</a>"""
-    MANUELFILTER_TXT = """Help: <b>Filters</b>
-
-- Filter is the feature were users can set automated replies for a particular keyword and tessa will respond whenever a keyword is found the message
-
-<b>NOTE:</b>
-1. eva maria should have admin privillage.
-2. only admins can add filters in a chat.
-3. alert buttons have a limit of 64 characters.
-
-<b>Commands and Usage:</b>
-• /filter - <code>add a filter in chat</code>
-• /filters - <code>list all the filters of a chat</code>
-• /del - <code>delete a specific filter in chat</code>
-• /delall - <code>delete the whole filters in a chat (chat owner only)</code>"""
-    BUTTON_TXT = """Help: <b>Buttons</b>
-
-- Eva Maria Supports both url and alert inline buttons.
-
-<b>NOTE:</b>
-1. Telegram will not allows you to send buttons without any content, so content is mandatory.
-2. Eva Maria supports buttons with any telegram media type.
-3. Buttons should be properly parsed as markdown format
-
-<b>URL buttons:</b>
-<code>[Button Text](buttonurl:https//t.me/EvaMariaBot)</code>
-
-<b>Alert buttons:</b>
-<code>[Button Text](buttonalert:This is an alert message)</code>"""
-    AUTOFILTER_TXT = """Help: <b>Auto Filter</b>
-
-<b>NOTE:</b>
-1. Make me the admin of your channel if it's private.
-2. make sure that your channel does not contains cam rip, porn and fake files.
-3. Forward the last message to me with quotes.
- I'll add all the files in that channel to my db."""
-    CONNECTION_TXT = """Help: <b>Connections</b>
-
-- Used to connect bot to PM for managing filters 
-- it helps to avoid spamming in groups.
-
-<b>NOTE:</b>
-1. Only admins can add a connection.
-2. Send <code>/connect</code> for connecting me to ur PM
-
-<b>Commands and Usage:</b>
-• /connect  - <code>connect a particular chat to your PM</code>
-• /disconnect  - <code>disconnect from a chat</code>
-• /connections - <code>list all your connections</code>"""
-    EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
-
-<b>NOTE:</b>
-these are the extra features of tessa
-
-<b>Commands and Usage:</b>
-• /id - <code>get id of a specifed user.</code>
-• /info  - <code>get information about a user.</code>
-• /imdb  - <code>get the film information from IMDb source.</code>
-• /search  - <code>get the film information from various sources.</code>"""
-    ADMIN_TXT = """🔮𝐀𝐁𝐎𝐔𝐓 𝐀𝐃𝐌𝐈𝐍 𝐌𝐎𝐃𝐄𝐒👷\n\n📝𝖭𝖮𝖳𝖤:Tʜɪs Mᴏᴅᴜʟᴇ Oɴʟʏ Wᴏʀᴋs Fᴏʀ Mʏ Aᴅᴍɪɴs 💣\n\n<u>𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 𝙰𝙽𝙳 𝚄𝚂𝙰𝙶𝙴:🗝️</u>\n• /logs - Tᴏ Gᴇᴛ Tʜᴇ Rᴇsᴄᴇɴᴛ Eʀʀᴏʀs 🌐\n• /stats - Tᴏ Gᴇᴛ Sᴛᴀᴛᴜs Oғ Fɪʟᴇs Iɴ Dʙ .🏧\n• /users - Tᴏ Gᴇᴛ Lɪsᴛ Oғ Mʏ Usᴇʀs Aɴᴅ Iᴅs. 👥\n• /chats - Tᴏ Gᴇᴛ Lɪsᴛ Oғ Tʜᴇ Mʏ Cʜᴀᴛs Aɴᴅ Iᴅs  ♨️\n• /leave  - Tᴏ Lᴇᴀᴠᴇ Fʀᴏᴍ A Cʜᴀᴛ .⛔\n• /disable  - Dᴏ Dɪsᴀʙʟᴇ A Cʜᴀᴛ .🚫\n• /ban  - Tᴏ Bᴀɴ A Usᴇʀ 🔒\n• /unban  - Tᴏ Uɴʙᴀɴ A Usᴇʀ .🔓\n• /channel - Tᴏ Gᴇᴛ Lɪsᴛ Oғ Tᴏᴛᴀʟ Cᴏɴɴᴇᴄᴛᴇᴅ Cʜᴀɴɴᴇʟs 📢\n• /broadcast - Tᴏ Bʀᴏᴀᴅᴄᴀsᴛ A Mᴇssᴀɢᴇ Tᴏ Aʟʟ Usᴇʀs 📣"""
-    STATUS_TXT = """🗄️𝗕𝗢𝗧'𝗦 𝗦𝗧𝗔𝗧𝗨𝗦📊\n\n⭓ Tᴏᴛᴀʟ ғɪʟᴇs sᴀᴠᴇᴅ : <code>{}</code>\n⭓ Tᴏᴛᴀʟ ᴜsᴇʀs ᴜsɪɴɢ : <code>{}</code>\n⭓ Tᴏᴛᴀʟ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴄʜᴀᴛs : <code>{}</code>\n⭓ Usᴇᴅ sᴛᴏʀᴀɢᴇ : <code>{}</code> ᴍʙ's\n⭓ Fʀᴇᴇ sᴛᴏʀᴀɢᴇ : <code>{}</code> ᴍʙ's\n\n🔥Cʀᴇᴀᴛᴇʀ : <a href='https://t.me/DEEKS_04_8'> Dᴇᴇᴋsʜɪᴛʜ ɢᴏᴡᴅᴀ👨🏻‍💻</a>"""
+    START_TXT = """🖐🏻🤓Hɪ ʜᴇʟʟᴏ {},\n\n🤹Aᴍ 𝗨𝗠𝗥 Gʀᴏᴜᴘ ᴍᴏᴠɪᴇs ᴅᴏɴᴇʀ ʀᴏʙᴏᴛ 🦸🏼‍♀️\n👼Mʏ ɴᴀᴍᴇ ɪs <a href='https://t.me/DB_MVDONER_BOT'>𝐃𝐁 𝙸𝙽𝙵𝙸𝙽𝙸𝚃𝚈 𝙼𝙾𝚅𝙸𝙴𝚂 𝙳𝙾𝙽𝙴𝚁 𝙱𝙾𝚃</a>\n\n✨𝙵𝚄𝙴𝚃𝚄𝚁𝙴𝚂 :>\n⭓ ɪ ᴄᴀɴ ʜᴇʟᴘ ᴜ ᴛᴏ sᴇᴀʀᴄʜ ᴍᴏᴠɪᴇs ɪɴ ᴍʏ ᴘᴍ.🔍\n⭓ ɪ ᴄᴀɴ ɢɪᴠᴇ ᴅɪʀᴇᴄᴛ ғɪʟᴇ ʟɪɴᴋ ɪɴ Yᴏᴜʀ ɢʀᴏᴜᴘ.📂\n⭓ ɪ ᴄᴀɴ ɢɪᴠᴇ ᴜ ɪɴғᴏ ᴏғ ᴀɴʏ ᴍᴏᴠɪᴇs.ℹ️\nAɴᴅ ᴍᴀɴʏ ᴇxᴀʟᴇɴᴛ ғᴇᴀᴛᴜʀs ......🧾\n\n⚡Jᴜsᴛ ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴜʀs ɢʀᴏᴜᴘ ᴏᴋᴋ ⚡\n\n✯ Cʀᴇᴀᴛᴇʀ : <a href='https://t.me/DEEKS_04_8'> Dᴇᴇᴋsʜɪᴛʜ ɢᴏᴡᴅᴀ🦸🏼‍♀️</a>"""
+    HELP_TXT = """🔰Dᴇᴀʀ {}\n\n☺️Cʜᴇᴄᴋ ᴛʜᴇ ʙᴇʟᴏᴡ ɢɪᴠᴇɴ ғᴇᴀᴜᴛᴜʀs ᴄᴏᴍᴍᴀɴᴅs👇🏻\nRᴇᴀᴅ ᴄᴀʀᴇғᴜʟʟʏ ᴏᴋᴋ..😜"""
+    ABOUT_TXT = """📖𝗔𝗕𝗢𝗨𝗧 𝗠𝗘 :\n\n✯ Mʏ ɴᴀᴍᴇ : 𝗨𝗠𝗥 Gʀᴏᴜᴘ ᴍᴏᴠɪᴇs ᴅᴏɴᴇʀ ʀᴏʙᴏᴛ 🦸🏼‍♀️\n✯ Cʀᴇᴀᴛᴇʀ : <a href='https://t.me/DEEKS_04_8'>® Dᴇᴇᴋsʜɪᴛʜ ɢᴏᴡᴅᴀ</a>\n✯ Lɪʙᴇᴀʀʏ : ᴘʏʀᴏɢʀᴀᴍ\n✯ Lᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ 𝟹\n✯ Dᴀᴛᴀʙᴀsᴇ : ᴍᴏɴɢᴏ ᴅʙ\n✯ ʙᴏᴛ sᴇʀᴠᴇʀ : ʜᴇʀᴏᴋᴜ \n✯ ʙᴜɪʟᴅ ᴠᴇʀsɪᴏɴ : v1.0.1 [ 𝙱𝙴𝚃𝙰 ]"""
+    SOURCE_TXT = """🔰 𝐂𝐇𝐀𝐍𝐍𝐄𝐋𝐒 𝐋𝐈𝐒𝐓'𝐒 :🎒\n\n✯ Mᴀɪɴ ᴄʜᴀɴɴᴇʟ : @UNI_MOVIES_BOX\n✯ Mᴀɪɴ ɢʀᴏᴜᴘ : @UM_REQUESTS\n✯ Kᴀɴɴᴀᴅᴀ ᴄʜᴀɴɴᴇʟ : @UMR_KAN_MOVIES\n✯ Fᴜᴛᴜʀᴇ ᴄʜᴀɴɴᴇʟ : @UMR_FILMBOX\n✯ Bᴏᴛ's ᴄʜᴀɴɴᴇʟ : @DB_ROBOTS\n✯ Bᴏᴛ's ɢʀᴏᴜᴘ : @DB_HELPER\n\n✯ Cʀᴇᴀᴛᴇʀ : <a href='https://t.me/DEEKS_04_8'> Dᴇᴇᴋsʜɪᴛʜ ɢᴏᴡᴅᴀ🦸🏼‍♀️</a>"""
+    MANUELFILTER_TXT = """🔰𝐀𝐁𝐎𝐔𝐓 𝐒𝐀𝐌𝐏𝐋𝐄 𝐅𝐈𝐋𝐓𝐄𝐑 ✨:\n\n📯Fɪʟᴛᴇʀ Is Tʜᴇ Fᴇᴀᴛᴜʀᴇ Wᴇʀᴇ Usᴇʀs Cᴀɴ Sᴇᴛ Aᴜᴛᴏᴍᴀᴛᴇᴅ Rᴇᴘʟɪᴇs Fᴏʀ A Pᴀʀᴛɪᴄᴜʟᴀʀ Kᴇʏᴡᴏʀᴅ Aɴᴅ Iᴛ Wɪʟʟ Rᴇsᴘᴏɴᴅ Wʜᴇɴᴇᴠᴇʀ A Kᴇʏᴡᴏʀᴅ Is Fᴏᴜɴᴅ Tʜᴇ Mᴇssᴀɢᴇ ᴏᴋᴋ\n\n📝ΝϴͲᎬ :\n1. ᴜ sʜᴏᴜʟᴅ ᴀᴅᴅ ᴍᴇ ᴀs ᴀᴅᴍɪɴ ɪɴ ᴜʀs ɢʀᴏᴜᴘ.🤹\n2. ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴀᴅᴅ ғɪʟᴛᴇʀs ɪɴ ᴀ ᴄʜᴀᴛ.🤗\n3. ᴀʟᴇʀᴛ ʙᴜᴛᴛᴏɴs ʜᴀᴠᴇ ᴀ ʟɪᴍɪᴛ ᴏғ 64 ᴄʜᴀʀᴀᴄᴛᴇʀs.🤔 \n\n🔰ᏟϴᎷᎷᎪΝᎠՏ ᎪΝᎠ ႮՏᎪᏀᎬ: \n\n• /filter - ᴀᴅᴅ ᴀ ғɪʟᴛᴇʀ ɪɴ ᴄʜᴀᴛ ⭐\n• /filters - ʟɪsᴛ ᴀʟʟ ᴛʜᴇ ғɪʟᴛᴇʀs ᴏғ ᴀ ᴄʜᴀᴛ 🌠\n• /del - ᴅᴇʟᴇᴛᴇ ᴀ sᴘᴇᴄɪғɪᴄ ғɪʟᴛᴇʀ ɪɴ ᴄʜᴀᴛ 🗳️\n• /delall - ᴅᴇʟᴇᴛᴇ ᴛʜᴇ ᴡʜᴏʟᴇ ғɪʟᴛᴇʀs ɪɴ ᴀ ᴄʜᴀᴛ (ᴄʜᴀᴛ ᴏᴡɴᴇʀ ᴏɴʟʏ)🚫 \n\n✯ Cʀᴇᴀᴛᴇʀ : <a href='https://t.me/DEEKS_04_8'> Dᴇᴇᴋsʜɪᴛʜ ɢᴏᴡᴅᴀ🔰</a>"""
+    BUTTON_TXT = """♻️Hᴏᴡ ᴛᴏ ᴄʀᴇᴀᴛᴇ ʙᴜᴛᴛᴏɴ ᴛᴇxᴛ ?\n\n<b>Bᴜᴛᴛᴏɴs ⌨️</b>- Tʜɪs ʙᴏᴛ sᴜᴘᴘᴏʀᴛs ʙᴏᴛʜ ᴜʀʟ ᴀɴᴅ ᴀʟᴇʀᴛ ɪɴʟɪɴᴇ ʙᴜᴛᴛᴏɴs .🏷️\n\n<b>📝ΝϴͲᎬ :</b>\n1. Tᴇʟᴇɢʀᴀᴍ Wɪʟʟ Nᴏᴛ Aʟʟᴏᴡs Yᴏᴜ Tᴏ Sᴇɴᴅ Bᴜᴛᴛᴏɴs Wɪᴛʜᴏᴜᴛ Aɴʏ Cᴏɴᴛᴇɴᴛ, Sᴏ Cᴏɴᴛᴇɴᴛ Is Mᴀɴᴅᴀᴛᴏʀʏ🧾.\n2🧾 I Sᴜᴘᴘᴏʀᴛs Bᴜᴛᴛᴏɴs Wɪᴛʜ Aɴʏ Tᴇʟᴇɢʀᴀᴍ Mᴇᴅɪᴀ Tʏᴘᴇ.📼\n3. Bᴜᴛᴛᴏɴs Sʜᴏᴜʟᴅ Bᴇ Pʀᴏᴘᴇʀʟʏ Pᴀʀsᴇᴅ As Mᴀʀᴋᴅᴏᴡɴ Fᴏʀᴍᴀᴛ.🎟️4. <b>Uʀʟ Bᴜᴛᴛᴏɴs :</b><code>[Button Text](buttonurl:https//t.me/DB_ROBOTS)</code>\n5. <b>Aʟᴇʀᴛ Bᴜᴛᴛᴏɴs :</b><code>[Button Text](buttonalert:This is an alert message)</code>♻️\n\n✯ Cʀᴇᴀᴛᴇʀ : <a href='https://t.me/DEEKS_04_8'> Dᴇᴇᴋsʜɪᴛʜ ɢᴏᴡᴅᴀ🦸🏼‍♀️</a>"""
+    AUTOFILTER_TXT = """<b>🗄️𝐀𝐁𝐎𝐔𝐓 𝐀𝐔𝐓𝐎 𝐅𝐈𝐋𝐓𝐄𝐑🗑️</b>\n\n<b>📝ΝϴͲᎬ: </b>\n1. Mᴀᴋᴇ Mᴇ Tʜᴇ Aᴅᴍɪɴ Oғ Yᴏᴜʀ Cʜᴀɴɴᴇʟ Iғ Iᴛ's Pʀɪᴠᴀᴛᴇ.👑\n2. Mᴀᴋᴇ Sᴜʀᴇ Tʜᴀᴛ Yᴏᴜʀ Cʜᴀɴɴᴇʟ Dᴏᴇs Nᴏᴛ Cᴏɴᴛᴀɪɴs Cᴀᴍ Rɪᴘ, Pᴏʀɴ Aɴᴅ Fᴀᴋᴇ Fɪʟᴇs.🗜️\n3. Fᴏʀᴡᴀʀᴅ Tʜᴇ Lᴀsᴛ Mᴇssᴀɢᴇ Tᴏ Mᴇ Wɪᴛʜ Qᴜᴏᴛᴇs. I'ʟʟ Aᴅᴅ Aʟʟ Tʜᴇ Fɪʟᴇs Iɴ Tʜᴀᴛ Cʜᴀɴɴᴇʟ Tᴏ Mʏ Dʙ 🧲.\n\n✯ Cʀᴇᴀᴛᴇʀ : <a href='https://t.me/DEEKS_04_8'> Dᴇᴇᴋsʜɪᴛʜ ɢᴏᴡᴅᴀ🦸🏼‍♀️</a>"""
+    CONNECTION_TXT = """<b>📢𝐀𝐁𝐎𝐔𝐓 𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐈𝐎𝐍𝐒🗳️</b>\n\n- Usᴇᴅ Tᴏ Cᴏɴɴᴇᴄᴛ Bᴏᴛ Tᴏ Pᴍ Fᴏʀ Mᴀɴᴀɢɪɴɢ Fɪʟᴛᴇʀs 🔔\n- Iᴛ Hᴇʟᴘs Tᴏ Aᴠᴏɪᴅ Sᴘᴀᴍᴍɪɴɢ Iɴ Gʀᴏᴜᴘs. 🚯\n<b>📝NOTE:</b>\n1. Oɴʟʏ Aᴅᴍɪɴs Cᴀɴ Aᴅᴅ A Cᴏɴɴᴇᴄᴛɪᴏɴ.🛡️\n2. Sᴇɴᴅ  <code>/connect</code> Fᴏʀ Cᴏɴɴᴇᴄᴛɪɴɢ Mᴇ Tᴏ Uʀ Pᴍ 📲\n\n<b>🔰𝖢𝖮𝖬𝖬𝖠𝖭𝖣𝖲 𝖠𝖭𝖣 𝖴𝖲𝖠𝖦𝖤🔰</b>\n• /connect - <code>Cᴏɴɴᴇᴄᴛ A Pᴀʀᴛɪᴄᴜʟᴀʀ Cʜᴀᴛ Tᴏ Yᴏᴜʀ Pᴍ☑️ </code>\n• /disconnect - <code>Dɪsᴄᴏɴɴᴇᴄᴛ Fʀᴏᴍ A Cʜᴀᴛ❎ </code>\n• /connections - <code>Lɪsᴛ Aʟʟ Yᴏᴜʀ Cᴏɴɴᴇᴄᴛɪᴏɴs📜 </code>\n\n✯ Cʀᴇᴀᴛᴇʀ : <a href='https://t.me/DEEKS_04_8'> Dᴇᴇᴋsʜɪᴛʜ ɢᴏᴡᴅᴀ🦸🏼‍♀️</a>"""
+    EXTRAMOD_TXT = """<b>🔮𝐀𝐁𝐎𝐔𝐓 𝐄𝐗𝐓𝐑𝐀 𝐌𝐎𝐃𝐔𝐋𝐄𝐒🔖</b>\n\n<b>📝NOTE:</b>Tʜᴇsᴇ Aʀᴇ Tʜᴇ Exᴛʀᴀ Fᴇᴀᴛᴜʀᴇs Oғ Tʜɪs Bᴏᴛ 📑\n\n<b>𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 𝙰𝙽𝙳 𝚄𝚂𝙰𝙶𝙴🧰:</b>\n\n• /id - <code>Gᴇᴛ Iᴅ Oғ A Sᴘᴇᴄɪғᴇᴅ Usᴇʀ🆔 .</code>\n• /info - <code>Gᴇᴛ Iɴғᴏʀᴍᴀᴛɪᴏɴ Aʙᴏᴜᴛ A Usᴇʀ .ℹ️</code>\n• /imdb - <code>Gᴇᴛ Tʜᴇ Fɪʟᴍ Iɴғᴏʀᴍᴀᴛɪᴏɴ Fʀᴏᴍ Iᴍᴅʙ Sᴏᴜʀᴄᴇ .✔️</code>\n• /search - <code>Gᴇᴛ Tʜᴇ Fɪʟᴍ Iɴғᴏʀᴍᴀᴛɪᴏɴ Fʀᴏᴍ Vᴀʀɪᴏᴜs Sᴏᴜʀᴄᴇs 〽️.</code>\n\n✯ Cʀᴇᴀᴛᴇʀ : <a href='https://t.me/DEEKS_04_8'> Dᴇᴇᴋsʜɪᴛʜ ɢᴏᴡᴅᴀ🦸🏼‍♀️</a>"""
+    ADMIN_TXT = """🔮𝐀𝐁𝐎𝐔𝐓 𝐀𝐃𝐌𝐈𝐍 𝐌𝐎𝐃𝐄𝐒👷\n\n📝𝖭𝖮𝖳𝖤:Tʜɪs Mᴏᴅᴜʟᴇ Oɴʟʏ Wᴏʀᴋs Fᴏʀ Mʏ Aᴅᴍɪɴs 💣\n\n<u>𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 𝙰𝙽𝙳 𝚄𝚂𝙰𝙶𝙴:🗝️</u>\n• /logs - Tᴏ Gᴇᴛ Tʜᴇ Rᴇsᴄᴇɴᴛ Eʀʀᴏʀs 🌐\n• /stats - Tᴏ Gᴇᴛ Sᴛᴀᴛᴜs Oғ Fɪʟᴇs Iɴ Dʙ .🏧\n• /users - Tᴏ Gᴇᴛ Lɪsᴛ Oғ Mʏ Usᴇʀs Aɴᴅ Iᴅs. 👥\n• /chats - Tᴏ Gᴇᴛ Lɪsᴛ Oғ Tʜᴇ Mʏ Cʜᴀᴛs Aɴᴅ Iᴅs  ♨️\n• /leave  - Tᴏ Lᴇᴀᴠᴇ Fʀᴏᴍ A Cʜᴀᴛ .⛔\n• /disable  - Dᴏ Dɪsᴀʙʟᴇ A Cʜᴀᴛ .🚫\n• /ban  - Tᴏ Bᴀɴ A Usᴇʀ 🔒\n• /unban  - Tᴏ Uɴʙᴀɴ A Usᴇʀ .🔓\n• /channel - Tᴏ Gᴇᴛ Lɪsᴛ Oғ Tᴏᴛᴀʟ Cᴏɴɴᴇᴄᴛᴇᴅ Cʜᴀɴɴᴇʟs 📢\n• /broadcast - Tᴏ Bʀᴏᴀᴅᴄᴀsᴛ A Mᴇssᴀɢᴇ Tᴏ Aʟʟ Usᴇʀs 📣\n\n✯ Cʀᴇᴀᴛᴇʀ : <a href='https://t.me/DEEKS_04_8'> Dᴇᴇᴋsʜɪᴛʜ ɢᴏᴡᴅᴀ🦸🏼‍♀️</a>"""
+    STATUS_TXT = """🗄️𝗕𝗢𝗧'𝗦 𝗦𝗧𝗔𝗧𝗨𝗦📊\n\n⭓ Tᴏᴛᴀʟ ғɪʟᴇs sᴀᴠᴇᴅ : <code>{}</code>📩\n⭓ Tᴏᴛᴀʟ ᴜsᴇʀs ᴜsɪɴɢ : <code>{}</code>👬\n⭓ Tᴏᴛᴀʟ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴄʜᴀᴛs : <code>{}</code>📮\n⭓ Usᴇᴅ sᴛᴏʀᴀɢᴇ : <code>{}</code> ᴍʙ's📲\n⭓ Fʀᴇᴇ sᴛᴏʀᴀɢᴇ : <code>{}</code> ᴍʙ's📱\n\n✯ Cʀᴇᴀᴛᴇʀ : <a href='https://t.me/DEEKS_04_8'> Dᴇᴇᴋsʜɪᴛʜ ɢᴏᴡᴅᴀ🦸🏼‍♀️</a>"""
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>)
 Total Members = <code>{}</code>
