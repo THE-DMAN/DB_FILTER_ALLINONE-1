@@ -25,7 +25,7 @@ async def start(client, message):
             InlineKeyboardButton('𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📯', url='https://t.me/UNI_MOVIES_BOX')
             ],[
             InlineKeyboardButton('💡𝙷𝙴𝙻𝙿', callback_data='help'),
-            InlineKeyboardButton('𝙰𝙱𝙾𝚄𝚃 𝙼𝙴 📖', callback_data='about')],
+            InlineKeyboardButton('𝙰𝙱𝙾𝚄𝚃 𝙼𝙴 📖', callback_data='about')],[
             InlineKeyboardButton('🤹 𝗖𝗥𝗘𝗔𝗧𝗘𝗥 🤹', url='https://t.me/DEEKS_04_8')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
