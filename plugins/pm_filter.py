@@ -553,7 +553,7 @@ async def auto_filter(client, message):
 
             try:
 
-                await message.reply_photo(photo=imdb.get('poster'), caption=f"<b>Query: {search}</b> \n‌IMDb Data:\n\n🏷 Title: <a href={imdb['url']}>{imdb.get('title')}</a>\n🎭 Genres: {imdb.get('genres')}\n📆 Year: <a href={imdb['url']}/releaseinfo>{imdb.get('year')>\a: / 10", reply_markup=InlineKeyboardMarkup(btn))
+                await message.reply_photo(photo=imdb.get('poster'), caption=f"<b>Query: {search}</b> \n‌IMDb Data:\n\n🏷 Title: <a href={imdb['url']}>{imdb.get('title')}</a>\n", reply_markup=InlineKeyboardMarkup(btn))
 
             except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
 
