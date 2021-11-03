@@ -2,7 +2,7 @@
  
 
 <h1 align="center">
-  <b>DB INFINITY MOVIES DONER BOT</b>
+  <b>DB INFINITY MOVIES DONER BOT ⚡</b>
 </h1>
 
 
