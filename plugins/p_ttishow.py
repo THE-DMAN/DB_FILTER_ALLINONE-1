@@ -21,7 +21,7 @@ async def save_group(bot, message):
         if message.chat.id in temp.BANNED_CHATS:
             # Inspired from a boat of a banana tree
             buttons = [[
-                InlineKeyboardButton('Support', url='https://t.me/EvaMariaSupport')
+                InlineKeyboardButton('Support', url='https://t.me/UM_REQUESTS')
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             k = await message.reply(
@@ -39,7 +39,7 @@ async def save_group(bot, message):
         username = bot.username
         buttons = [[
             InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{username}?start"),
-            InlineKeyboardButton('📢 Updates', url='https://t.me/EvaMariaSupport')
+            InlineKeyboardButton('📢 Updates', url='https://t.me/db_robots')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -52,7 +52,7 @@ async def save_group(bot, message):
                     await (temp.MELCOW['welcome']).delete()
                 except:
                     pass
-            temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>")
+            temp.MELCOW['welcome'] = await message.reply(f"<b>👋🏻 Hɪ ʜᴇʟʟᴏ {u.mention},\n Wᴇʟᴄᴏᴍᴇ ᴛᴏ {message.chat.title}\n\n<b>✪ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 💌 @UM_REQUESTS</b>\n<b>✪ sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ 🛡️ @UNI_MOVIES_BOX</b>\n<b>⛨ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ⚔️@DEEKS_04_8⚔️</b></b>")
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
@@ -66,7 +66,7 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('Support', url='https://t.me/EvaMariaSupport')
+            InlineKeyboardButton('Support', url='https://t.me/Um_requests')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
@@ -104,7 +104,7 @@ async def disable_chat(bot, message):
     await message.reply('Chat Succesfully Disabled')
     try:
         buttons = [[
-            InlineKeyboardButton('Support', url='https://t.me/EvaMariaSupport')
+            InlineKeyboardButton('Support', url='https://t.me/um_requests')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
