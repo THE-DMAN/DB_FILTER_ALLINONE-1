@@ -558,9 +558,9 @@ async def auto_filter(client, message):
             except Exception as e:
                 print(e)
                 await message.reply_text(f"⚡🎉Hɪ Hᴇʟʟᴏ  {u.mention} I Gᴏᴛ Tʜᴇ Rᴇsᴜʟᴛs Fᴏʀ Uʀs Rᴇϙᴜᴇsᴛs .👇🏻\n\n📜About >> {search}\n\n💬𝗜𝗠𝗗𝗕 𝗗𝗔𝗧𝗔 𝗜𝗡𝗙𝗢 📖\n🎟️Mᴏᴠɪᴇ Tɪᴛʟᴇ :  <a href={imdb['url']}>{imdb.get('title')}</a>\n🕰️Rᴇʟᴇᴀsᴇᴅ Yᴇᴀʀ  : <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>\n⭐Mᴏᴠɪᴇ Rᴀᴛɪɴɢs  : <a href={imdb['url']}/ratings>{imdb.get('rating')}</a> / 10 | IMDB\n🎭Gᴇɴʀᴇs :  {imdb.get('genres')}\n\n<b>✪ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 💌 @UM_REQUESTS</b>\n<b>✪ sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ 🛡️ @UNI_MOVIES_BOX</b>\n<b>⛨ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ⚔️@DEEKS_04_8⚔️</b>\n\n<b>🔏ᴛᴇᴀᴍ © 𝐔𝙽𝙸𝚅𝙴𝚁𝚂𝙰𝙻 𝐌𝙾𝚅𝙸𝙴𝚂 𝐑𝙴𝚀𝚄𝙴𝚂𝚃𝚂🎟️ </b>", reply_markup=InlineKeyboardMarkup(btn))
-             elif imdb:
+            elif imdb:
                 await message.reply_text(f"<b>Query: {search}</b> \n‌IMDb Data:\n\n🏷 Title: <a href={imdb['url']}>{imdb.get('title')}</a>\n🎭 Genres: {imdb.get('genres')}\n📆 Year: <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>\n🌟 Rating: <a href={imdb['url']}/ratings>{imdb.get('rating')}</a> / 10", reply_markup=InlineKeyboardMarkup(btn))
-             else:
+            else:
                 await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‎ </b>", reply_markup=InlineKeyboardMarkup(btn))
 
         
